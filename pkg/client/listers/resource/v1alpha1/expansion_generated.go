@@ -9,11 +9,3 @@ type MachineInfoListerExpansion interface{}
 // MachineInfoNamespaceListerExpansion allows custom methods to be added to
 // MachineInfoNamespaceLister.
 type MachineInfoNamespaceListerExpansion interface{}
-
-// MachineInfoListListerExpansion allows custom methods to be added to
-// MachineInfoListLister.
-type MachineInfoListListerExpansion interface{}
-
-// MachineInfoListNamespaceListerExpansion allows custom methods to be added to
-// MachineInfoListNamespaceLister.
-type MachineInfoListNamespaceListerExpansion interface{}

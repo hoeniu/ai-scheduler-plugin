@@ -149,7 +149,6 @@ type SiblingNumaInfo struct {
 	SiblingNumaAvgMBWCapacityMap    map[string]int64 `json:"siblingNumaAvgMBWCapacityMap"`
 }
 
-// +genclient
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // MachineInfoList is a list of MachineInfo resources

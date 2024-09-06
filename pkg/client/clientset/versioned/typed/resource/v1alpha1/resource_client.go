@@ -11,7 +11,6 @@ import (
 type ResourceV1alpha1Interface interface {
 	RESTClient() rest.Interface
 	MachineInfosGetter
-	MachineInfoListsGetter
 }
 
 // ResourceV1alpha1Client is used to interact with features provided by the resource.node.io group.
@@ -21,10 +20,6 @@ type ResourceV1alpha1Client struct {
 
 func (c *ResourceV1alpha1Client) MachineInfos(namespace string) MachineInfoInterface {
 	return newMachineInfos(c, namespace)
-}
-
-func (c *ResourceV1alpha1Client) MachineInfoLists(namespace string) MachineInfoListInterface {
-	return newMachineInfoLists(c, namespace)
 }
 
 // NewForConfig creates a new ResourceV1alpha1Client for the given config.

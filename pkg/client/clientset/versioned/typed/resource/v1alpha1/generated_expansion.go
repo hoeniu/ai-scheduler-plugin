@@ -3,5 +3,3 @@
 package v1alpha1
 
 type MachineInfoExpansion interface{}
-
-type MachineInfoListExpansion interface{}

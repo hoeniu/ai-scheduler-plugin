@@ -16,10 +16,6 @@ func (c *FakeResourceV1alpha1) MachineInfos(namespace string) v1alpha1.MachineIn
 	return &FakeMachineInfos{c, namespace}
 }
 
-func (c *FakeResourceV1alpha1) MachineInfoLists(namespace string) v1alpha1.MachineInfoListInterface {
-	return &FakeMachineInfoLists{c, namespace}
-}
-
 // RESTClient returns a RESTClient that is used to communicate
 // with API server by this client implementation.
 func (c *FakeResourceV1alpha1) RESTClient() rest.Interface {

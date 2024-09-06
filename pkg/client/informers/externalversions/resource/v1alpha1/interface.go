@@ -10,8 +10,6 @@ import (
 type Interface interface {
 	// MachineInfos returns a MachineInfoInformer.
 	MachineInfos() MachineInfoInformer
-	// MachineInfoLists returns a MachineInfoListInformer.
-	MachineInfoLists() MachineInfoListInformer
 }
 
 type version struct {
@@ -28,9 +26,4 @@ func New(f internalinterfaces.SharedInformerFactory, namespace string, tweakList
 // MachineInfos returns a MachineInfoInformer.
 func (v *version) MachineInfos() MachineInfoInformer {
 	return &machineInfoInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
-}
-
-// MachineInfoLists returns a MachineInfoListInformer.
-func (v *version) MachineInfoLists() MachineInfoListInformer {
-	return &machineInfoListInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }
