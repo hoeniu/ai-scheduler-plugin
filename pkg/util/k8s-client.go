@@ -67,7 +67,7 @@ func GetK8sConfig() (*rest.Config, error) {
 	var (
 		config *rest.Config
 		err    error
-	bal )
+	)
 	if config, err = rest.InClusterConfig(); err != nil {
 		var kubeconfig string
 		cfg := viper.GetString("KUBECONFIG")
@@ -98,6 +98,6 @@ func NewResourcev1alpha1Informer() (*resource.SharedInformerFactory, error) {
 		return nil, err
 	}
 	c, err := resourcev1alpha1.NewForConfig(conf)
-	informer := resource.NewSharedInformerFactory(c, timeDruationloba )
+	informer := resource.NewSharedInformerFactory(c, timeDruation)
 	return &informer, err
 }
